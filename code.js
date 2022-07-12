@@ -39,13 +39,16 @@ function game() {
 
     if (playRound(playerSelection, computerSelection) == "You win!") {
       playerWins = ++playerWins;
+      alert(playerSelection + " beats " + computerSelection);
     } else if (playRound(playerSelection, computerSelection) == "You lose!") {
       computerWins = ++computerWins;
+      alert(playerSelection + " loses to " + computerSelection);
     } else if (playRound(playerSelection, computerSelection) == "You must enter rock, paper or scissors") {
       i--; 
       alert("You must enter rock, paper or scissors");
     } else {
       ties = ++ties;
+      alert(playerSelection + " ties with " + computerSelection);
     }
 
     console.log(playerSelection);
